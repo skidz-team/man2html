@@ -1,0 +1,2310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see https://gitea.dmz.rs/disu1950/">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+   * {
+  font-family: 'Monaco', monospace;
+}
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>TERMUX</title>
+
+</head>
+<body>
+
+<h1 align="center">TERMUX</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#USER INTERFACE">USER INTERFACE</a><br>
+<a href="#Using wake-lock">Using wake-lock</a><br>
+<a href="#TOUCH KEYBOARD">TOUCH KEYBOARD</a><br>
+<a href="#HARDWARE KEYBOARD">HARDWARE KEYBOARD</a><br>
+<a href="#CONFIGURATION">CONFIGURATION</a><br>
+<a href="#EXTRA KEYS ROW">EXTRA KEYS ROW</a><br>
+<a href="#SUPPORTED KEYS">SUPPORTED KEYS</a><br>
+<a href="#TEXT INPUT VIEW">TEXT INPUT VIEW</a><br>
+<a href="#DIFFERENCES FROM LINUX DISTRIBUTIONS">DIFFERENCES FROM LINUX DISTRIBUTIONS</a><br>
+<a href="#PACKAGE MANAGEMENT">PACKAGE MANAGEMENT</a><br>
+<a href="#ACCESSING THE STORAGE">ACCESSING THE STORAGE</a><br>
+<a href="#Note about external storage">Note about external storage</a><br>
+<a href="#Transferring files to Termux">Transferring files to Termux</a><br>
+<a href="#Sharing data to other applications">Sharing data to other applications</a><br>
+<a href="#Android 11+">Android 11+</a><br>
+<a href="#BACKUP AND RESTORE">BACKUP AND RESTORE</a><br>
+<a href="#RECOVERY IF SESSION FAILS TO START">RECOVERY IF SESSION FAILS TO START</a><br>
+<a href="#ENVIRONMENT">ENVIRONMENT</a><br>
+<a href="#FILES">FILES</a><br>
+<a href="#BUGS">BUGS</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+<a href="#AUTHORS">AUTHORS</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>Termux</b> -
+a terminal emulator application for Android OS.</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Termux is an
+Android terminal emulator and Linux environment application
+that works directly with no rooting or setup required. A
+minimal base system is installed automatically, additional
+packages are available using the package manager.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Here is a just a
+brief list of things you can do with Termux:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>Data processing with Python.</p></td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>Programming in a development environment.</p></td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>Downloading and managing files and pages using
+time-established tools.</p></td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>Learning the basics of the Linux command line
+environment.</p> </td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>Running an SSH client.</p></td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>Synchronizing and backing up your files.</p></td></tr>
+</table>
+
+<p style="margin-left:9%; margin-top: 1em">Of course, usage
+is not limited to the topics listed above.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Note that it is
+expected that you have at least basic knowledge about
+command line and shell scripting.</p>
+
+<h2>USER INTERFACE
+<a name="USER INTERFACE"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">At launch Termux
+shows a terminal interface, whose text size can be adjusted
+by pinch zooming or double tapping and pulling the content
+towards or from you.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Besides the
+terminal there are three additional interface elements
+available: a context menu, navigation drawer and
+notification.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The context menu
+can be shown by long pressing anywhere on the terminal. It
+provides menu entries for:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p style="margin-top: 1em">Selecting and pasting text.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Opening URL selector.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Sharing text from the terminal to other apps
+(e.g.&nbsp;email or SMS).</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Launching password autofill service.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Resetting the terminal if it gets stuck.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Force terminating the current session.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Styling the terminal by selecting a font and a color
+scheme.</p> </td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Check box for toggling screen always on feature.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Showing this help page.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Opening settings menu.</p></td>
+<td width="5%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="83%">
+
+
+<p>Reporting issue.</p></td>
+<td width="5%">
+</td></tr>
+</table>
+
+<p style="margin-left:9%; margin-top: 1em">The navigation
+drawer is revealed by swiping inwards from the left part of
+the screen. It has four elements:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p style="margin-top: 1em">Button for opening Termux
+settings.</p> </td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>A list of sessions. Clicking on a session shows it in
+the terminal while long pressing allows you to specify a
+session title.</p></td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>A button to toggle visibility of the touch keyboard.</p></td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="88%">
+
+
+<p>A button to create new terminal sessions. Long press it
+for creating a named session or a fail-safe one.</p></td></tr>
+</table>
+
+<p style="margin-left:9%; margin-top: 1em">The
+notification, available when a terminal session is running,
+is available by pulling down the notification menu. Pressing
+the notification leads to the most current terminal session.
+It may also be expanded by pinch-zooming or performing a
+single-finger glide to expose these actions:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="2%"></td>
+<td width="79%">
+
+
+<p style="margin-top: 1em">Exiting all running terminal
+sessions.</p> </td>
+<td width="9%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="79%">
+
+
+<p>Use a wake lock to avoid entering sleep mode.</p></td>
+<td width="9%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="79%">
+
+
+<p>Use a high performance wifi lock to maximize wifi
+performance.</p> </td>
+<td width="9%">
+</td></tr>
+</table>
+
+<p style="margin-left:9%; margin-top: 1em">With a wake lock
+held the notification and Termux background processes will
+be available even if no terminal session is running, which
+allows server and other background processes to run more
+reliably.</p>
+
+<h3>Using wake-lock
+<a name="Using wake-lock"></a>
+</h3>
+
+
+<p style="margin-left:9%; margin-top: 1em">If you are
+executing a long operation in Termux and want to turn off
+device screen, you need to enable Wake Lock. You can do that
+through the notification, by clicking on button
+&ldquo;Acquire wakelock&rdquo; or by executing this
+command:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">termux-wake-lock</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Wake locks are
+needed to prevent device from going into sleep mode. If you
+will not do that, your tasks will run very slowly or even be
+paused. Acquired Wake Lock implies a higher battery usage
+during standby.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Please note that
+Wake Lock does not affect network performance when screen is
+off and you may observe a packet loss.</p>
+
+<p style="margin-left:9%; margin-top: 1em">To release Wake
+Lock, you need to either run command</p>
+
+<pre style="margin-left:18%; margin-top: 1em">termux-wake-unlock</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">or click button
+&ldquo;Release wakelock&rdquo; in notification.</p>
+
+<h2>TOUCH KEYBOARD
+<a name="TOUCH KEYBOARD"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Use of keys like
+ALT, CTRL, ESC is necessary for working with a command line
+programs. As Android touch keyboards usually do not include
+such keys, Termux uses the Volume-Down button to emulate the
+CTRL key. For example, holding the Volume-Down and
+&ldquo;L&rdquo; on touch keyboard will send the same input
+as pressing key combination CTRL+L on a hardware
+keyboard.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The result of
+using CTRL (Volume-Down) in combination with a key depends
+on which program is being used. See below for the list of
+common shortcuts usable in most shells.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p style="margin-top: 1em"><tt>CTRL+A</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p style="margin-top: 1em">Move cursor to the beginning of
+line</p> </td>
+<td width="27%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p><tt>CTRL+C</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p>Abort current process by sending SIGINT</p></td>
+<td width="27%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p><tt>CTRL+D</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p>Logout of a terminal session by sending EOF</p></td>
+<td width="27%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p><tt>CTRL+E</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p>Move cursor to the end of line</p></td>
+<td width="27%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p><tt>CTRL+K</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p>Delete from cursor to the end of line</p></td>
+<td width="27%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p><tt>CTRL+U</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p>Delete from cursor to the beginning of line</p></td>
+<td width="27%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p><tt>CTRL+L</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p>Clear the terminal</p></td>
+<td width="27%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p><tt>CTRL+Z</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p>Suspend current process by sending SIGTSTP</p></td>
+<td width="27%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p><tt>CTRL+W</tt></p></td>
+<td width="1%"></td>
+<td width="55%">
+
+
+<p>Clear prompt before word</p></td>
+<td width="27%">
+</td></tr>
+</table>
+
+<p style="margin-left:9%; margin-top: 1em">The Volume-Up
+key also serves as a special key to produce certain input.
+But please note that Volume-Up is not equivalent of the ALT
+key. <tt><br>
+Volume-Up+E</tt></p>
+
+<p style="margin-left:18%;">Escape key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+T</tt></p>
+
+<p style="margin-left:18%;">Tab key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+1</tt></p>
+
+<p style="margin-left:18%;">F1, Volume-Up+2 will produce
+F2, etc</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+0</tt></p>
+
+<p style="margin-left:18%;">F10 key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+B</tt></p>
+
+<p style="margin-left:18%;">ALT+B, back a word when using
+Readline</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+F</tt></p>
+
+<p style="margin-left:18%;">ALT+F, forward a word when
+using Realine</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+X</tt></p>
+
+<p style="margin-left:18%;">ALT+X</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+W</tt></p>
+
+<p style="margin-left:18%;">Up arrow key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+A</tt></p>
+
+<p style="margin-left:18%;">Left arrow key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+S</tt></p>
+
+<p style="margin-left:18%;">Down arrow key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+D</tt></p>
+
+<p style="margin-left:18%;">Right arrow key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+L</tt></p>
+
+<p style="margin-left:18%;"><b>|</b>, the pipe
+character</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+H</tt></p>
+
+<p style="margin-left:18%;"><b>~</b>, the tilde
+character</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+U</tt></p>
+
+<p style="margin-left:18%;"><b>_</b>, the underscore
+character</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+P</tt></p>
+
+<p style="margin-left:18%;">Page Up key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+N</tt></p>
+
+<p style="margin-left:18%;">Page Down key</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+.</tt></p>
+
+<p style="margin-left:18%;">CTRL+\, send SIGQUIT</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+V</tt></p>
+
+<p style="margin-left:18%;">Show the volume control</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+Q</tt></p>
+
+<p style="margin-left:18%;">Toggle extra keys row</p>
+
+<p style="margin-left:9%;"><tt>Volume-Up+K</tt></p>
+
+<p style="margin-left:18%;">Another variant to toggle extra
+keys row</p>
+
+<p style="margin-left:9%; margin-top: 1em">Termux supports
+the special key row which allows you to specify desired keys
+like CTRL or ESC or their combinations. See section <b>EXTRA
+KEYS ROW</b>.</p>
+
+<h2>HARDWARE KEYBOARD
+<a name="HARDWARE KEYBOARD"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">The following
+shortcuts are available when using Termux with a hardware
+(e.g.&nbsp;Bluetooth) keyboard: <tt><br>
+CTRL+ALT+C</tt></p>
+
+<p style="margin-left:18%;">Create new session</p>
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+R</tt></p>
+
+<p style="margin-left:18%;">Rename current session</p>
+
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+&lt;DOWN&gt;</tt></p>
+
+<p style="margin-left:18%;">Switch to next session</p>
+
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+&lt;UP&gt;</tt></p>
+
+<p style="margin-left:18%;">Switch to previous session</p>
+
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+&lt;RIGHT&gt;</tt></p>
+
+<p style="margin-left:18%;">Open drawer</p>
+
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+&lt;LEFT&gt;</tt></p>
+
+<p style="margin-left:18%;">Close drawer</p>
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+K</tt></p>
+
+<p style="margin-left:18%;">Toggle soft keyboard.</p>
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+M</tt></p>
+
+<p style="margin-left:18%;">Show menu</p>
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+U</tt></p>
+
+<p style="margin-left:18%;">Select URL</p>
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+V</tt></p>
+
+<p style="margin-left:18%;">Paste clipboard content</p>
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+ (+/-)</tt></p>
+
+<p style="margin-left:18%;">Adjust font size</p>
+
+<p style="margin-left:9%;"><tt>CTRL+ALT+ (1-9)</tt></p>
+
+<p style="margin-left:18%;">Go to numbered session</p>
+
+<p style="margin-left:9%; margin-top: 1em">These shortcuts
+do not work with touch keyboard or extra keys row.</p>
+
+<h2>CONFIGURATION
+<a name="CONFIGURATION"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">All Termux
+configuration is done through text file located at</p>
+
+<pre style="margin-left:18%; margin-top: 1em">~/.termux/termux.properties</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">It uses a simple
+key=value property syntax. See below for all supported
+properties.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Note that
+updated configuration takes effect only when you have
+executed</p>
+
+<pre style="margin-left:18%; margin-top: 1em">termux-reload-settings</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">or have
+restarted the application. <tt><br>
+allow-external-apps</tt></p>
+
+<p style="margin-left:18%;">If set to &ldquo;true&rdquo;,
+external applications are allowed to execute arbitrary
+commands within the Termux environment through the
+RUN_COMMAND intent, if permission
+com.termux.permission.RUN_COMMAND has been granted.</p>
+
+<p style="margin-left:18%; margin-top: 1em">This option is
+also required for functionality of <b>termux-open</b> and
+other things using Content Provider as of Termux
+v0.118+.</p>
+
+<p style="margin-left:9%;"><tt>back-key</tt></p>
+
+<p style="margin-left:18%;">Controls the behaviour of key
+&ldquo;back&rdquo;.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Accepts a one
+of these values:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="79%">
+
+
+<p><b>back</b> - The default. A standard behaviour of
+Android OS, will hide touch keyboard if shown, if not - move
+to home screen without closing application.</p></td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="79%">
+
+
+<p><b>escape</b> - When set, touching the key will send
+escape character.</p></td></tr>
+</table>
+
+<p style="margin-left:9%;"><tt>bell-character</tt></p>
+
+<p style="margin-left:18%;">Controls the behaviour of bell
+characters.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Accepts a one
+of these values:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="41%">
+
+
+<p><b>vibrate</b> - vibrate the device.</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="41%">
+
+
+<p><b>beep</b> - short sound beep.</p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="41%">
+
+
+<p><b>ignore</b> - ignore bell characters.</p></td>
+<td width="38%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">If property is
+not being set, the default behaviour is equivalent to
+&ldquo;bell-character=vibrate&rdquo;.</p>
+
+
+<p style="margin-left:9%;"><tt>ctrl-space-workaround</tt></p>
+
+<p style="margin-left:18%;">Set this to &ldquo;true&rdquo;
+if ctrl+space key combination does not work on hardware
+keyboard.</p>
+
+
+<p style="margin-left:9%;"><tt>default-working-directory</tt></p>
+
+<p style="margin-left:18%;">An absolute path to default
+working directory. Default is Termux home.</p>
+
+
+<p style="margin-left:9%;"><tt>disable-hardware-keyboard-shortcuts</tt></p>
+
+<p style="margin-left:18%;">Set this to &ldquo;true&rdquo;
+to disable hardware keyboard shortcuts.</p>
+
+
+<p style="margin-left:9%;"><tt>disable-terminal-session-change-toast</tt></p>
+
+<p style="margin-left:18%;">Set this to &ldquo;true&rdquo;
+to disable toast notifications on terminal session
+changes.</p>
+
+
+<p style="margin-left:9%;"><tt>enforce-char-based-input</tt></p>
+
+<p style="margin-left:18%;">Set this to &ldquo;true&rdquo;
+if you have issues with touch keyboard. For example text is
+not being sent to terminal until you tap space. Or keyboard
+shows the wrong layout, for example numeric.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Recommended for
+people using Samsung devices with stock touch keyboard.</p>
+
+<p style="margin-left:18%; margin-top: 1em">This option is
+disabled by default as cause some issues with correctly
+working keyboards.</p>
+
+<p style="margin-left:9%;"><tt>extra-keys-style</tt></p>
+
+<p style="margin-left:18%;">Controls the style of extra
+keys row view.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Accepts a one
+of these values:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="73%">
+
+
+<p><b>arrows-only</b> - use symbols only for arrow
+buttons.</p> </td>
+<td width="6%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="73%">
+
+
+<p><b>arrows-all</b> - replace some labels with well-known
+symbols.</p> </td>
+<td width="6%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="73%">
+
+
+<p><b>all</b> - use symbols instead labels where
+possible.</p> </td>
+<td width="6%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="73%">
+
+
+<p><b>none</b> - don&rsquo;t replace labels with symbols at
+all.</p> </td>
+<td width="6%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">If extra keys
+row symbols are not displayed properly, use
+&ldquo;none&rdquo;.</p>
+
+
+<p style="margin-left:9%;"><tt>extra-keys-text-all-caps</tt></p>
+
+<p style="margin-left:18%;">Set this to &ldquo;true&rdquo;
+to force capitalize the text on extra keys row buttons.</p>
+
+<p style="margin-left:9%;"><tt>fullscreen</tt></p>
+
+<p style="margin-left:18%;">Set this to &ldquo;true&rdquo;
+to have Termux running in a full screen mode.</p>
+
+<p style="margin-left:18%; margin-top: 1em">The full screen
+mode may not work correctly on some devices. This issue can
+be fixed by enabling
+&ldquo;use-fullscreen-workaround&rdquo;.</p>
+
+
+<p style="margin-left:9%;"><tt>hide-soft-keyboard-on-startup</tt></p>
+
+<p style="margin-left:18%;">Set this to &ldquo;true&rdquo;
+to make software keyboard hidden on application startup.</p>
+
+
+<p style="margin-left:9%;"><tt>shortcut.create-session</tt></p>
+
+<p style="margin-left:18%;">Sets a key combination for
+creating new session.</p>
+
+<p style="margin-left:18%; margin-top: 1em">For example,
+use of</p>
+
+<pre style="margin-left:27%; margin-top: 1em">shortcut.create-session = ctrl + t</pre>
+
+
+<p style="margin-left:18%; margin-top: 1em">will allow to
+open a new terminal session by pressing CTRL + t.</p>
+
+
+<p style="margin-left:9%;"><tt>shortcut.next-session</tt></p>
+
+<p style="margin-left:18%;">Sets a key combination for
+switching to the next session. Value format is same as for
+&ldquo;shortcut.create-session&rdquo; property.</p>
+
+
+<p style="margin-left:9%;"><tt>shortcut.previous-session</tt></p>
+
+<p style="margin-left:18%;">Sets a key combination for
+switching to the previous session. Value format is same as
+for &ldquo;shortcut.create-session&rdquo; property.</p>
+
+
+<p style="margin-left:9%;"><tt>shortcut.rename-session</tt></p>
+
+<p style="margin-left:18%;">Sets a key combination for
+opening a dialog for renaming the current session. Value
+format is same as for &ldquo;shortcut.create-session&rdquo;
+property.</p>
+
+
+<p style="margin-left:9%;"><tt>soft-keyboard-toggle-behaviour</tt></p>
+
+<p style="margin-left:18%;">Controls the behaviour of
+&ldquo;keyboard&rdquo; button located in the drawer.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Accepts a one
+of these values:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="79%">
+
+
+<p><b>enable/disable</b> - whether to enable or disable
+soft keyboard at all.</p></td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="79%">
+
+
+<p><b>show/hide</b> - whether to show or hide soft
+keyboard.</p> </td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">Default is
+show/hide.</p>
+
+
+<p style="margin-left:9%;"><tt>terminal-cursor-blink-rate</tt></p>
+
+<p style="margin-left:18%;">Controls the cursor blink rate.
+Valid value range is from 100 to 2000. If set to 0, the
+cursor blinking will be disabled.</p>
+
+
+<p style="margin-left:9%;"><tt>terminal-cursor-style</tt></p>
+
+<p style="margin-left:18%;">Controls the style of terminal
+cursor.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Accepts a one
+of these values:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="11%">
+
+
+<p><b>block</b></p></td>
+<td width="68%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="11%">
+
+
+<p><b>bar</b></p></td>
+<td width="68%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="11%">
+
+
+<p><b>underline</b></p></td>
+<td width="68%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">Default is
+block.</p>
+
+
+<p style="margin-left:9%;"><tt>terminal-margin-horizontal</tt></p>
+
+<p style="margin-left:18%;">Controls the terminal margin on
+left and right. Value is defined in dp units in range from 0
+to 100. Default is 3.</p>
+
+
+<p style="margin-left:9%;"><tt>terminal-margin-vertical</tt></p>
+
+<p style="margin-left:18%;">Controls the terminal margin on
+top and bottom. Value is defined in dp units in range from 0
+to 100. Default is 0.</p>
+
+
+<p style="margin-left:9%;"><tt>terminal-onclick-url-open</tt></p>
+
+<p style="margin-left:18%;">If set to &ldquo;true&rdquo;,
+clicking on URL link in terminal transcript will open
+it.</p>
+
+
+<p style="margin-left:9%;"><tt>terminal-toolbar-height</tt></p>
+
+<p style="margin-left:18%;">Controls the terminal toolbar
+height. Valid value range is from 0.4 to 3.0. Default is
+1.</p>
+
+
+<p style="margin-left:9%;"><tt>terminal-transcript-rows</tt></p>
+
+<p style="margin-left:18%;">Controls how much lines are
+stored in scrollback buffer. Valid value range is from 100
+to 50000. Default is 2000.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Note that
+setting high values may affect console rendering
+performance.</p>
+
+<p style="margin-left:9%;"><tt>use-black-ui</tt></p>
+
+<p style="margin-left:18%;">If set to &ldquo;true&rdquo;,
+application will use primarily black color for the most of
+user interface elements.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Setting this to
+&ldquo;false&rdquo; will have opposite effect.</p>
+
+<p style="margin-left:18%; margin-top: 1em">If the property
+is not set, then application will choose colors accordingly
+to the current system theme.</p>
+
+
+<p style="margin-left:9%;"><tt>use-fullscreen-workaround</tt></p>
+
+<p style="margin-left:18%;">Set this to &ldquo;true&rdquo;
+if experience issues with full screen mode.</p>
+
+<p style="margin-left:9%;"><tt>volume-keys</tt></p>
+
+<p style="margin-left:18%;">Controls the behaviour of
+volume buttons.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Accepts a one
+of these values:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="64%">
+
+
+<p><b>virtual</b> - volume buttons will act as special
+keys.</p> </td>
+<td width="15%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="64%">
+
+
+<p><b>volume</b> - control sound volume as usual.</p></td>
+<td width="15%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">Default is
+&ldquo;virtual&rdquo;.</p>
+
+<h2>EXTRA KEYS ROW
+<a name="EXTRA KEYS ROW"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Termux also has
+an extra keys row(s) which allows you to extend your current
+keyboard. To enable the extra keys row you have to long tap
+on the keyboard button in the left drawer menu or
+Volume-Down+K key combination.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Layout of the
+extra keys rows is configurable through the standard Termux
+configuration file located in</p>
+
+<pre style="margin-left:18%; margin-top: 1em">~/.termux/termux.properties</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">See section
+<b>CONFIGURATION</b> to learn more about Termux
+properties.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Sample
+configuration of 2 extra keys rows:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">extra-keys = [ \
+  ['ESC','/','-','HOME','UP','END','PGUP'], \
+  ['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN'] \
+]</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Configuration
+may be done as one line or be spread between multiple lines
+by using backslashes like in example above.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Value format is
+2-dimensional JSON array.</p>
+
+<p style="margin-left:9%; margin-top: 1em">It is possible
+to configure a popups buttons which can be triggered by
+swiping up on the respective keys.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Here is a syntax
+for the popup key object:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">{key: KEY, popup: POPUP_KEY}</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Alternate, more
+advanced syntax for defining the popup:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">{key: KEY, popup: {macro: 'KEY COMBINATION', display: 'Key combo'}}</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">An example of
+complex Termux extra keys configuration with using
+popups:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">extra-keys = [[ \
+  {key: ESC, popup: {macro: &quot;CTRL f d&quot;, display: &quot;tmux exit&quot;}}, \
+  {key: CTRL, popup: {macro: &quot;CTRL f BKSP&quot;, display: &quot;tmux &acirc;&quot;}}, \
+  {key: ALT, popup: {macro: &quot;CTRL f TAB&quot;, display: &quot;tmux &acirc;&quot;}}, \
+  {key: TAB, popup: {macro: &quot;ALT a&quot;, display: A-a}}, \
+  {key: LEFT, popup: HOME}, \
+  {key: DOWN, popup: PGDN}, \
+  {key: UP, popup: PGUP}, \
+  {key: RIGHT, popup: END}, \
+  {macro: &quot;ALT j&quot;, display: A-j, popup: {macro: &quot;ALT g&quot;, display: A-g}}, \
+  {key: KEYBOARD, popup: {macro: &quot;CTRL d&quot;, display: exit}} \
+]]</pre>
+
+
+<h3>SUPPORTED KEYS
+<a name="SUPPORTED KEYS"></a>
+</h3>
+
+
+<p style="margin-left:9%; margin-top: 1em">Each key
+&ldquo;entry&rdquo; can be either a string such as
+&lsquo;|&rsquo;, &lsquo;/&rsquo;, &lsquo;=&rsquo; or one of
+the values listed below.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p style="margin-top: 1em">CTRL (&ldquo;special
+key&rdquo;)</p> </td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>ALT (&ldquo;special key&rdquo;)</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>FN (&ldquo;special key&rdquo;)</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>SPACE</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>ESC</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>TAB</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>HOME</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>END</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>PGUP</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>PGDN</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>INS</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>DEL</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>BKSP</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>UP</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>LEFT</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>RIGHT</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>DOWN</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>ENTER</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>BACKSLASH</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>QUOTE</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>APOSTROPHE</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>KEYBOARD (hide the keyboard)</p></td>
+<td width="26%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="2%"></td>
+<td width="62%">
+
+
+<p>DRAWER (open app drawer)</p></td>
+<td width="26%">
+</td></tr>
+</table>
+
+<p style="margin-left:9%; margin-top: 1em">Each of the
+three &ldquo;special keys&rdquo; listed above should only be
+listed at most ONCE in the extra-keys definition
+i.e.&nbsp;do NOT have more than one CTRL key. Having more
+than one instance of any &ldquo;special key&rdquo; will
+result in a bug whereby those keys do not function
+correctly.</p>
+
+<p style="margin-left:9%; margin-top: 1em">A note about
+backslash: this character has special meaning and you should
+not use it directly to define a key. Use
+&lsquo;BACKSLASH&rsquo; instead, otherwise properly escape
+it - <tt>'\\\\'</tt>.</p>
+
+<h3>TEXT INPUT VIEW
+<a name="TEXT INPUT VIEW"></a>
+</h3>
+
+
+<p style="margin-left:9%; margin-top: 1em">Termux does not
+support the advanced features of touch keyboards like
+autocorrection, prediction and swipe typing. To solve this,
+it provides a text input view. Text entered in it will get
+pasted to the terminal. Because it is a native Android text
+input view, all touch keyboard features will work. To access
+the text input view you have to swipe the extra keys row to
+the left.</p>
+
+<h2>DIFFERENCES FROM LINUX DISTRIBUTIONS
+<a name="DIFFERENCES FROM LINUX DISTRIBUTIONS"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Termux does not
+guarantee full compatibility with GNU/Linux environment and
+you may observe inconvenient behaviour of some utilities,
+especially from those which were not officially ported to
+Android OS (Termux). See below to learn about the major
+differences. <tt><br>
+No compliance with Filesystem Hierarchy Standard</tt></p>
+
+<p style="margin-left:18%;">Termux does not follow
+Filesystem Hierarchy Standard because Android does not make
+root file system world-writable and Termux is not a virtual
+machine.</p>
+
+<p style="margin-left:18%; margin-top: 1em">All files are
+stored within the application private directory on internal
+storage to ensure that application has full control over its
+files and also special features like symlinks or file access
+modes (<b>chmod(1)</b>).</p>
+
+<p style="margin-left:18%; margin-top: 1em">The data is
+being stored in 2 main locations: <tt><br>
+/data/data/com.termux/files/home</tt></p>
+
+<p style="margin-left:27%;">A home directory where user can
+place his files.</p>
+
+
+<p style="margin-left:18%;"><tt>/data/data/com.termux/files/usr</tt></p>
+
+<p style="margin-left:27%;">The prefix - a place where all
+packages are being extracted during installation. Has a
+directory structure similar to the root file system of
+traditional Linux distributions.</p>
+
+<p style="margin-left:18%; margin-top: 1em">You may have
+problems with running some utilities accessing standard
+directories like /var or /tmp.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Termux has some
+workarounds for that. For example, it preloads a shared
+library &ldquo;libtermux-exec.so&rdquo; which intercepts
+&ldquo;execve()&rdquo; and maps /bin to directory located in
+the prefix.</p>
+
+<p style="margin-left:18%; margin-top: 1em">With utility
+<b>termux-chroot</b> that comes as part of package
+<b>proot(1)</b> you should be able to emulate a
+FHS-compliant root file system.</p>
+
+<p style="margin-left:9%;"><tt>No GNU libc</tt></p>
+
+<p style="margin-left:18%;">Termux does not use GNU libc.
+Instead it uses a Bionic libc and dynamic linker provided by
+Android OS.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Programs linked
+with GNU libc will not work in Termux. Bionic libc has
+different ABI and dynamic linker path. You likely will
+observe weird messages &ldquo;No such file or
+directory&rdquo; when attempting to run executable file but
+know that file is present. That happens because dynamic
+linker cannot be started because does not exist on expected
+location.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Programs which
+were statically-linked with GNU libc may misbehave too. You
+may get a &ldquo;Bad system call&rdquo; errors. Also
+networking software will likely show DNS resolution errors
+because Android does not provide <tt>/etc/resolv.conf</tt>
+and by default even in statically-linked programs GNU libc
+still uses libresolv as shared library which is not
+present.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Consider to
+rebuild your software in Termux environment by using
+clang.</p>
+
+<p style="margin-left:9%;"><tt>Only one user</tt></p>
+
+<p style="margin-left:18%;">Termux environment is
+single-user only. It operates under user id assigned by
+Android OS which you cannot change.</p>
+
+<p style="margin-left:18%; margin-top: 1em">There no
+privilege separation, all Termux files such as package data
+or user data in home directory is owned by same user id. Be
+extremely careful when executing third-party scripts as they
+can easily do unauthorized modifications which may lead to
+broken Termux installation or lost user data.</p>
+
+<h2>PACKAGE MANAGEMENT
+<a name="PACKAGE MANAGEMENT"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Termux uses
+<b>apt(8)</b> as package manager, just like Debian. However
+we highly recommend to use our wrapper <b>pkg</b> which
+simplifies certain tasks and also automatically picks the
+mirror to help reduce traffic usage on the origin
+repositories. See its usage below.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Installing
+package:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">pkg install &lt;package name&gt;</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Uninstall
+package:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">pkg uninstall &lt;package name&gt;</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Reinstall
+package:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">pkg reinstall &lt;package name&gt;</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">List the all
+available packages:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">pkg list-all</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">List the
+installed packages:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">pkg list-installed</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Search
+packages:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">pkg search &lt;query&gt;</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Upgrade
+packages:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">pkg upgrade</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Termux
+implements a rolling-release updates scheme to reduce amount
+of work needed to maintain packages since developer team is
+small. You need to check for updates on a regular basis,
+especially before installing a new package. Otherwise at
+some day your environment may become broken.</p>
+
+<p style="margin-left:9%; margin-top: 1em">If you prefer to
+use <b>apt(8)</b> over <b>pkg</b>, please ensure that for
+installing updates you use these commands:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">apt update
+apt full-upgrade</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Also always run
+&ldquo;apt update&rdquo; before installing package. The
+wrapper <b>pkg</b> does that for you automatically.</p>
+
+<h2>ACCESSING THE STORAGE
+<a name="ACCESSING THE STORAGE"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">By default
+Termux does not provide access to storage volumes where you
+typically store your files like pictures or documents. In
+order to get access to shared storage, execute the next
+command:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">termux-setup-storage</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">This will prompt
+you for Storage Access Permission. Once it granted, Termux
+will setup symlinks to various standard directories under
+&ldquo;~/storage&rdquo;. <tt><br>
+~/storage/shared</tt></p>
+
+<p style="margin-left:18%;">The root directory of shared
+storage.</p>
+
+
+<p style="margin-left:9%;"><tt>~/storage/downloads</tt></p>
+
+<p style="margin-left:18%;">Standard directory where
+downloaded files are stored.</p>
+
+<p style="margin-left:9%;"><tt>~/storage/dcim</tt></p>
+
+<p style="margin-left:18%;">Standard directory where
+captured photos and video are stored.</p>
+
+<p style="margin-left:9%;"><tt>~/storage/pictures</tt></p>
+
+<p style="margin-left:18%;">Standard directory for photo
+gallery.</p>
+
+<p style="margin-left:9%;"><tt>~/storage/music</tt></p>
+
+<p style="margin-left:18%;">Standard directory where music
+albums are stored.</p>
+
+<p style="margin-left:9%;"><tt>~/storage/movies</tt></p>
+
+<p style="margin-left:18%;">Standard directory where videos
+are stored.</p>
+
+
+<p style="margin-left:9%;"><tt>~/storage/external-1</tt></p>
+
+<p style="margin-left:18%;">The private directory of Termux
+on external SD-card.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Note that if you
+decide to wipe Termux data or uninstall application, all
+files stored in private application directories will be
+deleted.</p>
+
+<h3>Note about external storage
+<a name="Note about external storage"></a>
+</h3>
+
+
+<p style="margin-left:9%; margin-top: 1em">Android does not
+allow to have a direct write access to external storage like
+SD-cards and USB drives unless you are not doing so in
+private directories like</p>
+
+<pre style="margin-left:18%; margin-top: 1em">/storage/0123-ABCD/Android/data/com.termux/files</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">If you want to
+write files to storage root or directory other than private
+one of Termux, you need superuser permissions.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Android
+applications like file managers can do that because they use
+a special API called Storage Access Framework. But command
+line utilities cannot use this one.</p>
+
+<h3>Transferring files to Termux
+<a name="Transferring files to Termux"></a>
+</h3>
+
+
+<p style="margin-left:9%; margin-top: 1em">To put files
+into Termux, you have 2 variants.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The first one
+would be copying or moving files from shared storage into
+Termux directory by using <b>cp(1)</b> or <b>mv(1)</b>. You
+may also setup a some file server and access it through
+localhost.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The second
+variant would be usage of file manager application which
+supports Storage Access Framework and is able to attach
+volumes. Just select &ldquo;Termux&rdquo; volume from menu
+and you should be able to access home directory.</p>
+
+<h3>Sharing data to other applications
+<a name="Sharing data to other applications"></a>
+</h3>
+
+
+<p style="margin-left:9%; margin-top: 1em">You may give a
+temporary read access to certain files stored within Termux.
+Use command</p>
+
+<pre style="margin-left:18%; margin-top: 1em">termux-open</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">to do this. You
+may specify a MIME type by using option
+&ldquo;--content-type&rdquo; when sharing the file to ensure
+that it will be opened by correct application.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Similarly to
+sharing files, you may share URL. You will need to use
+command &ldquo;<b>termux-open-url</b>&rdquo;.</p>
+
+<h3>Android 11+
+<a name="Android 11+"></a>
+</h3>
+
+
+<p style="margin-left:9%; margin-top: 1em">Since Android 11
+Termux may not be able to provide the access to shared and
+external storage. This is not a bug. Just new restrictions
+which enforce storage access over Android API which cannot
+be used by shell.</p>
+
+<p style="margin-left:9%; margin-top: 1em">From that point
+you are locked to Termux private directories like $HOME or
+such on storage volume:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">/storage/self/primary/Android/data/com.termux/files</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">You still should
+be able to exchange files with Termux home directory by
+accessing Termux virtual volume through File managers
+supporting Storage Access Framework.</p>
+
+<h2>BACKUP AND RESTORE
+<a name="BACKUP AND RESTORE"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Termux
+installation can be backed up by archiving directory $PREFIX
+and storing the file in safe location. A rudimentary backup
+tools are already bundled with package
+&lsquo;termux-tools&rsquo;, though you are free to use your
+own.</p>
+
+<p style="margin-left:9%; margin-top: 1em">How to back up
+Termux installation ($PREFIX):</p>
+
+<pre style="margin-left:18%; margin-top: 1em">termux-backup /sdcard/termux.tar.gz</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">How to restore
+Termux installation from backup:</p>
+
+<pre style="margin-left:18%; margin-top: 1em">termux-restore /sdcard/termux.tar.gz</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">Note that backup
+performed this way does not include the content of your home
+directory. Restoring procedure will overwrite the content of
+$PREFIX deleting all extra files which were not present in
+backup archive. So be careful!</p>
+
+<h2>RECOVERY IF SESSION FAILS TO START
+<a name="RECOVERY IF SESSION FAILS TO START"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">If Termux
+session cannot be launched due to misconfiguration in
+dotfiles, you still should be able to start a failsafe
+session. How-to:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="3%">
+
+
+<p>1.</p></td>
+<td width="1%"></td>
+<td width="45%">
+
+
+<p>Long click on Termux launcher icon.</p></td>
+<td width="42%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="3%">
+
+
+<p>2.</p></td>
+<td width="1%"></td>
+<td width="45%">
+
+
+<p>Select shortcut &ldquo;failsafe&rdquo;.</p></td>
+<td width="42%">
+</td></tr>
+</table>
+
+<p style="margin-left:9%; margin-top: 1em">Once you are in
+a failsafe session, navigate to Termux home directory and
+rename or delete the dotfiles causing the issue. Finally,
+restart the application.</p>
+
+<p style="margin-left:9%; margin-top: 1em">If problem is
+not with the dotfiles, for example you have messed up Termux
+prefix and do not know what to do, our recommendation is
+<i>complete reinstallation</i> by executing</p>
+
+<pre style="margin-left:18%; margin-top: 1em">rm -rf /data/data/com.termux/files/usr</pre>
+
+
+<p style="margin-left:9%; margin-top: 1em">This will erase
+all packages but will not touch your home directory.</p>
+
+<h2>ENVIRONMENT
+<a name="ENVIRONMENT"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Termux exposes
+some variables set by Android OS as well as its own. Here is
+a brief list of default environment variables, their
+description and values.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="5%">
+
+
+<p style="margin-top: 1em"><tt>HOME</tt></p></td>
+<td width="4%"></td>
+<td width="26%">
+
+
+<p style="margin-top: 1em">Path to Termux home.</p></td>
+<td width="56%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">Termux home
+directory is a place for user files. It is located at</p>
+
+<pre style="margin-left:27%; margin-top: 1em">/data/data/com.termux/files/home</pre>
+
+
+<p style="margin-left:18%; margin-top: 1em">Do not modify
+the value of this environment variable since Termux
+doesn&rsquo;t support customizing location of the home
+directory.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="8%">
+
+
+<p style="margin-top: 1em"><tt>PREFIX</tt></p></td>
+<td width="1%"></td>
+<td width="35%">
+
+
+<p style="margin-top: 1em">Termux installation prefix.</p></td>
+<td width="47%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">A base
+directory for Termux installation. It is located at</p>
+
+<pre style="margin-left:27%; margin-top: 1em">/data/data/com.termux/files/usr</pre>
+
+
+<p style="margin-left:18%; margin-top: 1em">Do not modify
+the value of this environment variable. Termux packages are
+not relocatable. Some of them may also look this variable to
+find their files.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="5%">
+
+
+<p style="margin-top: 1em"><tt>PATH</tt></p></td>
+<td width="4%"></td>
+<td width="41%">
+
+
+<p style="margin-top: 1em">Utility lookup paths for
+shells.</p> </td>
+<td width="41%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">Used by shells
+to find command line utilities. By default, it contains this
+value:</p>
+
+<pre style="margin-left:27%; margin-top: 1em">/data/data/com.termux/files/usr/bin</pre>
+
+
+<p style="margin-left:18%; margin-top: 1em">You may append
+or prepend your own paths if needed, for example:</p>
+
+<pre style="margin-left:27%; margin-top: 1em">export PATH=$PATH:$HOME/bin</pre>
+
+
+<p style="margin-left:18%; margin-top: 1em">But make sure
+that Termux-specific bin directory location is not
+missing.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="5%">
+
+
+<p style="margin-top: 1em"><tt>LANG</tt></p></td>
+<td width="4%"></td>
+<td width="9%">
+
+
+<p style="margin-top: 1em">Locale.</p></td>
+<td width="73%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">Mimic support
+of UTF-8 en_US locale, so programs will properly handle
+Unicode characters.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Default value
+is &ldquo;en_US.UTF-8&rdquo;.</p>
+
+<p style="margin-left:18%; margin-top: 1em">As Termux does
+not support locales, changing this variable is not
+recommended and may have unexpected effects.</p>
+
+<h2>FILES
+<a name="FILES"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">A list of files
+which have special meaning for the Termux application.
+<tt><br>
+~/bin/termux-url-opener</tt></p>
+
+<p style="margin-left:18%;">A script for processing an
+intent when a third-party application shares an URL with
+Termux.</p>
+
+
+<p style="margin-left:9%;"><tt>~/bin/termux-file-editor</tt></p>
+
+<p style="margin-left:18%;">A script for processing an
+intent when a third-party application shares a file with
+Termux.</p>
+
+<p style="margin-left:9%;"><tt>~/storage</tt></p>
+
+<p style="margin-left:18%;">A directory containing symlinks
+to shared or external storages and to certain standard
+directories.</p>
+
+<p style="margin-left:18%; margin-top: 1em">Do not store
+files directly under this directory. Put them to locations
+accessible through symlinks instead.</p>
+
+
+<p style="margin-left:9%;"><tt>~/.termux/termux.properties</tt></p>
+
+<p style="margin-left:18%;">Application configuration
+file.</p>
+
+
+<p style="margin-left:9%;"><tt>~/.termux/colors.properties</tt></p>
+
+<p style="margin-left:18%;">A configuration file containing
+a color scheme for styling the terminal. Usually is
+generated by Termux:Styling add-on.</p>
+
+<p style="margin-left:9%;"><tt>~/.termux/font.ttf</tt></p>
+
+<p style="margin-left:18%;">A file containing TTF font data
+for styling the terminal. Usually is generated by
+Termux:Styling add-on.</p>
+
+<h2>BUGS
+<a name="BUGS"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Report
+application issues to
+&lt;https://github.com/termux/termux-app/issues&gt;.</p>
+
+<p style="margin-left:9%; margin-top: 1em">Package-related
+issues should be reported to
+&lt;https://github.com/termux/termux-packages/issues&gt;.</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Complete and
+up-to-date infomation about Termux usage is available on
+Termux Wiki here:
+&lt;https://wiki.termux.com/wiki/Main_Page&gt;.</p>
+
+<h2>AUTHORS
+<a name="AUTHORS"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">The Termux
+project contributors.</p>
+<hr>
+</body>
+</html>
