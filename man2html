@@ -1,0 +1,12 @@
+#!/bin/sh
+
+file=$(man -w $@) || exit
+
+if gzip -t $file
+then
+  zcat $file
+else
+  cat $file
+fi | groff -mandoc -T html
+
+# % man2html ls > ls_manpage.html
