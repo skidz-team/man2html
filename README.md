@@ -42,4 +42,4 @@ chmod +x /data/data/com.termux/files/home/.local/bin/man2html
 
 ## License
 
-This project is licensed under the WTF Public License, version 3.
+See [LICENSE](LICENSE) This project is licensed under the WTF Public License, version 3.
